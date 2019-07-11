@@ -1,0 +1,6 @@
+node_modules
+.webpack
+coverage
+.DS_Store
+.serverless
+lib

@@ -1,0 +1,37 @@
+# serverless.yml-
+
+service: graphql-talk
+plugins:
+  - serverless-offline
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: 'dev'
+  region: us-east-1
+  
+  webpack:
+    includeModules:
+      forceExclude:
+        - aws-sdk
+  serverless-offline:
+    port: 7000
+
+functions:
+
+  graphiql:
+    handler: src/index.default
+    events:
+      - http: 
+          method: get
+          path: /graphql
+          cors: true
+
+  graphql:
+    handler: src/index.default
+    events:
+      - http: 
+          method: post
+          path: /graphql
+          cors: true

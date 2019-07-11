@@ -1,0 +1,15 @@
+type Author {
+    name: String
+    employment: String
+    website: String
+    twitter: String
+}
+
+type About {
+    title: String
+    author: Author
+}
+
+type Query {
+    about: About
+}
