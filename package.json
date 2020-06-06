@@ -7,7 +7,7 @@
     "start": "serverless offline start"
   },
   "dependencies": {
-    "apollo-server-lambda": "2.5.0",
+    "apollo-server-lambda": "2.14.2",
     "cors": "2.8.5",
     "graphql": "14.3.0",
     "graphql-tag": "2.10.1",
